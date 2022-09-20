@@ -6,6 +6,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Alamat</th>
       <th scope="col">Created At</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,17 @@
       <td><?= $mhs['nama'] ?></td>
       <td><?= $mhs['alamat'] ?></td>
       <td><?= $mhs['created_at'] ?></td>
+      <td>
+        <form action="/mahasiswa/delete/<?= $mhs['id'] ?>" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger">Hapus</button>
+        </form>
+
+        <form action="/mahasiswa/edit/<?= $mhs['id'] ?>" method="get">
+          <input type="hidden" name="_method" value="UPDATE">
+          <button type="submit" class="btn btn-warning">Edit</button>
+        </form>
+      </td>
     </tr>
     <?php } ?>
   </tbody>
