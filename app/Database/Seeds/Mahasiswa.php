@@ -14,12 +14,14 @@ class Mahasiswa extends Seeder
                 'npm' => '2017051006',
                 'nama' => 'Adiwijaya Satria Nusantara',
                 'alamat' => 'Gisting',
+                'deskripsi' => 'Teladan',
                 'created_at' => Time::now(),
             ],
             [
                 'npm' => '2017051001',
                 'nama' => 'Ervan Chodry',
                 'alamat' => 'Rejomulyo',
+                'deskripsi' => 'Teladan',
                 'created_at' => Time::now()
             ]
 

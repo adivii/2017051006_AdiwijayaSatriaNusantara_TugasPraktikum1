@@ -10,13 +10,12 @@ class Mahasiswa extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = true;
-    protected $allowedFields    = ['npm', 'nama', 'alamat', 'created_at', 'updated_at'];
+    protected $useSoftDeletes   = false;
+    protected $allowedFields    = ['npm', 'nama', 'alamat', 'deskripsi', 'created_at', 'updated_at'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 }
